@@ -1,0 +1,8 @@
+services:
+  sauceApp:
+    build: .
+    image: playwright_python_image:latest
+    command: ["pytest"]
+    volumes:
+      - ./reports:/app/src/reports
+      - ./screenshots:/app/src/screenshots
